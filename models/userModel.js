@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
             values: ["admin", "buyer", "seller"],
             message: "only buyer and seller are allowed",
         },
-        default: "user",
+        default: "buyer",
     },
     email: {
         type: String,

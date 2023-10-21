@@ -45,7 +45,7 @@ exports.register = catchAsync(async (req, res, next) => {
     // create a new user
     const newUser = await User.create(user);
 
-    sendToken(user, 201, res);
+    sendToken(newUser, 201, res);
 });
 
 exports.login = catchAsync(async (req, res, next) => {

@@ -1,3 +1,4 @@
+const Catalog = require("../models/catalogModel");
 const Product = require("../models/productModel");
 const catchAsync = require("../utils/catchAsync");
 
@@ -36,8 +37,14 @@ exports.getOrders = catchAsync(async (req, res, next) => {
 });
 
 exports.createCatalog = catchAsync(async (req, res, next) => {
-    res.status(200).json({
-        status: "okay",
-        data: "working",
+    // get the catalog details
+    const catalog = req.body;
+    catalog.seller = req.user.id;
+    const newCatalog = await Catalog.create(catalog);
+    res.status(201).json({
+        status: "created",
+        data: {
+            newCatalog,
+        },
     });
 });

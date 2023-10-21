@@ -4,13 +4,13 @@ const appError = require("./utils/appError");
 const userRouter = require("./routes/userRouter");
 const buyerRouter = require("./routes/buyerRouter");
 const sellerRouter = require("./routes/sellerRouter");
+const errorController = require("./controllers/errorController");
 
 // creating app using express instance
 const app = express();
 
 // logger middleware
-if (process.env.DEV) {
-    console.log(process.env.ENV == "dev");
+if ((process.env.ENV = "dev")) {
     app.use(morgan("dev"));
 }
 
@@ -28,5 +28,7 @@ app.all("*", (req, res, next) => {
         )
     );
 });
+
+app.use(errorController);
 
 module.exports = app;

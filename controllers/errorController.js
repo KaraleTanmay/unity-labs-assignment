@@ -29,7 +29,7 @@ module.exports = (err, req, res, next) => {
     err.status = err.status || "error";
     err.statusCode = err.statusCode || 404;
 
-    if (!process.env.ENV == "dev") {
+    if (process.env.ENV == "dev") {
         sendDevErrors(err, res);
     } else {
         let error = { ...err };

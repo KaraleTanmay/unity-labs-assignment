@@ -18,7 +18,7 @@ mongoose
         console.log("db connected");
     })
     .catch((err) => {
-        console.log("bd not connected" + err);
+        console.log("database not connected" + err);
     });
 
 const server = app.listen(process.env.PORT, () => {

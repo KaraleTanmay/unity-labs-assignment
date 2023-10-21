@@ -19,6 +19,7 @@ const sendToken = (user, statusCode, res) => {
         // secure : process.env.ENV=="dev" ? false : true
     });
 
+    user.password = null;
     res.status(statusCode).json({
         status: "success",
         data: {
@@ -64,8 +65,6 @@ exports.login = catchAsync(async (req, res, next) => {
             new appError("please provide correct username and password", 401)
         );
     }
-
-    user.password = null;
 
     sendToken(user, 200, res);
 });

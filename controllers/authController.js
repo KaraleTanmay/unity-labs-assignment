@@ -2,6 +2,7 @@ const User = require("../models/userModel");
 const appError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 const jwt = require("jsonwebtoken");
+const { promisify } = require("util");
 
 const sendToken = (user, statusCode, res) => {
     // create a jwt token
@@ -68,3 +69,40 @@ exports.login = catchAsync(async (req, res, next) => {
 
     sendToken(user, 200, res);
 });
+
+exports.protected = catchAsync(async (req, res, next) => {
+    let cookie = req.headers.cookie;
+    // check if cookie is present in headers
+    if (!cookie) {
+        return next(new appError("please log in first", 401));
+    }
+    cookie = cookie.split("=")[1];
+
+    // verify the token and get the payload
+    const payload = await promisify(jwt.verify)(cookie, process.env.JWT_SECRET);
+
+    // check if user still exists
+    const user = await User.findById(payload.id);
+
+    if (!user) {
+        return next(
+            new appError(
+                "this user does not exist anymore. please create new account",
+                401
+            )
+        );
+    }
+    req.user = user;
+    next();
+});
+
+exports.restrictedTo = (...usertypes) => {
+    return (req, res, next) => {
+        if (!usertypes.includes(req.user.usertype)) {
+            return next(
+                new appError("Your are not authorized to access this page", 401)
+            );
+        }
+        next();
+    };
+};

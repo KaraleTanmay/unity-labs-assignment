@@ -1,10 +1,11 @@
 const express = require("express");
 const morgan = require("morgan");
 const appError = require("./utils/appError");
-const userRouter = require("./routes/userRouter");
+const authRouter = require("./routes/authRouter");
 const buyerRouter = require("./routes/buyerRouter");
 const sellerRouter = require("./routes/sellerRouter");
 const errorController = require("./controllers/errorController");
+const authController = require("./controllers/authController");
 
 // creating app using express instance
 const app = express();
@@ -15,9 +16,19 @@ if ((process.env.ENV = "dev")) {
 }
 
 app.use(express.json());
-app.use("/api/auth", userRouter);
-app.use("/api/buyer", buyerRouter);
-app.use("/api/seller", sellerRouter);
+app.use("/api/auth", authRouter);
+app.use(
+    "/api/buyer",
+    authController.protected,
+    authController.restrictedTo("buyer", "admin"),
+    buyerRouter
+);
+app.use(
+    "/api/seller",
+    authController.protected,
+    authController.restrictedTo("seller", "admin"),
+    sellerRouter
+);
 
 // invalid routes handler
 app.all("*", (req, res, next) => {

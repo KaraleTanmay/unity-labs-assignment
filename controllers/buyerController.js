@@ -39,7 +39,7 @@ exports.getSellerCatalog = catchAsync(async (req, res, next) => {
 
 exports.createOrder = catchAsync(async (req, res, next) => {
     // check if order is not empty
-    if (!req.body.products.length > 0) {
+    if (!req.body.products || !req.body.products.length > 0) {
         return next(new appError("invalid order...order cannot be empty", 404));
     }
     // create order
@@ -75,7 +75,7 @@ exports.createOrder = catchAsync(async (req, res, next) => {
         if (!catalogItems[product.productId]) {
             invalidProducts.push(product.productId);
         } else {
-            sum += product.quantity * catalogItems[product.productId];
+            sum += (product.quantity || 1) * catalogItems[product.productId];
         }
     });
     order.amount = sum;

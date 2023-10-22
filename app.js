@@ -11,7 +11,7 @@ const authController = require("./controllers/authController");
 const app = express();
 
 // logger middleware
-if ((process.env.ENV = "dev")) {
+if (process.env.ENV === "dev") {
     app.use(morgan("dev"));
 }
 

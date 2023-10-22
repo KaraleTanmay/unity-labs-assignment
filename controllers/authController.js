@@ -104,7 +104,10 @@ exports.restrictedTo = (...usertypes) => {
         // check if usertype is authorized to access or not
         if (!usertypes.includes(req.user.usertype)) {
             return next(
-                new appError("Your are not authorized to access this page", 401)
+                new appError(
+                    `Your are not authorized to access this page. Only ${usertypes} can access this page`,
+                    401
+                )
             );
         }
         next();

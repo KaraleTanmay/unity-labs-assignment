@@ -1,6 +1,7 @@
 const Catalog = require("../models/catalogModel");
 const Order = require("../models/orderModel");
 const Product = require("../models/productModel");
+const appError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
 // assumed functionality
@@ -47,6 +48,12 @@ exports.createCatalog = catchAsync(async (req, res, next) => {
     const catalog = req.body;
     catalog.seller = req.user.id;
 
+    // check if catalog is not empty
+    if (!catalog.products || !catalog.products.length > 0) {
+        return next(
+            new appError("catalog cannot be empty. please add products", 400)
+        );
+    }
     // create the catalog
     const newCatalog = await Catalog.create(catalog);
     res.status(201).json({

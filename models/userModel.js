@@ -42,15 +42,13 @@ const userSchema = new mongoose.Schema(
 
 userSchema.index({ username: 1, email: 1 }, { unique: true });
 
+// hasing password before saving
 userSchema.pre("save", async function (next) {
-    if (!this.isModified("password")) {
-        return next();
-    }
-
     this.password = await bcrypt.hash(this.password, 12);
     next();
 });
 
+// instance method to check password
 userSchema.methods.checkPassword = async function (
     candidatePassword,
     password

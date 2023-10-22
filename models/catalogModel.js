@@ -21,6 +21,7 @@ const catalogSchema = new mongoose.Schema(
                 type: mongoose.Schema.Types.ObjectId,
                 ref: "Product",
                 validate: {
+                    // checking if product exists in database
                     validator: async function (value) {
                         return await Product.exists(value);
                     },

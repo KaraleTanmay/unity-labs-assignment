@@ -34,12 +34,6 @@ const orderSchema = new mongoose.Schema({
                 }
             ),
         ],
-        validate: {
-            validator: function (value) {
-                return value.length > 0;
-            },
-            message: "Order should have at least one product.",
-        },
     },
     amount: {
         type: Number,
@@ -47,9 +41,8 @@ const orderSchema = new mongoose.Schema({
     },
 });
 
-orderSchema.path("products").validate(function (value) {
-    return value.length > 0;
-}, "Order should have at least one product.");
+// setting index on seller as query will be done by seller only
+orderSchema.index({ seller: 1 });
 
 const Order = mongoose.model("Order", orderSchema);
 

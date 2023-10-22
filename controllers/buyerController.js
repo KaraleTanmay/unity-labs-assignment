@@ -5,6 +5,7 @@ const appError = require("../utils/appError");
 const Order = require("../models/orderModel");
 
 exports.getSellerList = catchAsync(async (req, res, next) => {
+    // get the list of all sellers
     const sellers = await User.find({ usertype: "seller" });
     res.status(200).json({
         status: "success",
@@ -37,6 +38,10 @@ exports.getSellerCatalog = catchAsync(async (req, res, next) => {
 });
 
 exports.createOrder = catchAsync(async (req, res, next) => {
+    // check if order is not empty
+    if (!req.body.products.length > 0) {
+        return next(new appError("invalid order...order cannot be empty", 404));
+    }
     // create order
     const order = {};
     order.products = req.body.products;
@@ -52,7 +57,7 @@ exports.createOrder = catchAsync(async (req, res, next) => {
     if (!catalog) {
         return next(
             new appError(
-                "invalid order...this seller does not have any catalog",
+                "the seller do not exists or does not have any catalog",
                 404
             )
         );

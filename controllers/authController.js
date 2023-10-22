@@ -16,6 +16,7 @@ const sendToken = (user, statusCode, res) => {
             Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 60 * 60 * 24 * 100
         ),
         httpOnly: true,
+        // use this option only on https
         // secure : process.env.ENV=="dev" ? false : true
     });
 
@@ -32,20 +33,19 @@ exports.register = catchAsync(async (req, res, next) => {
     //  get the user from request body
     const user = req.body;
 
-    // check if provided passwords are atching or not
+    // check if provided passwords are matching or not
     if (user.password != user.passwordConfirm) {
         return next(new appError("provided passwords do not match", 400));
     }
 
     // checking if usertype is admin
     if (user.usertype == "admin") {
-        return next(
-            new appError("Your are not authorized to register as admin", 403)
-        );
+        return next(new appError("Your can not to register as admin", 403));
     }
     // create a new user
     const newUser = await User.create(user);
 
+    // send jwt token
     sendToken(newUser, 201, res);
 });
 
@@ -66,6 +66,7 @@ exports.login = catchAsync(async (req, res, next) => {
         );
     }
 
+    // send jwt token
     sendToken(user, 200, res);
 });
 
@@ -75,6 +76,7 @@ exports.protected = catchAsync(async (req, res, next) => {
     if (!cookie) {
         return next(new appError("please log in first", 401));
     }
+    // saperating the token from cookie
     cookie = cookie.split("=")[1];
 
     // verify the token and get the payload
@@ -91,12 +93,15 @@ exports.protected = catchAsync(async (req, res, next) => {
             )
         );
     }
+
+    // put the user object on request for next middlewares
     req.user = user;
     next();
 });
 
 exports.restrictedTo = (...usertypes) => {
     return (req, res, next) => {
+        // check if usertype is authorized to access or not
         if (!usertypes.includes(req.user.usertype)) {
             return next(
                 new appError("Your are not authorized to access this page", 401)

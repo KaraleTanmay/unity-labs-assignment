@@ -9,7 +9,7 @@ exports.getProducts = catchAsync(async (req, res, next) => {
     // get all the products
     const products = await Product.find();
     res.status(200).json({
-        status: "created",
+        status: "success",
         data: {
             products,
         },
@@ -46,6 +46,8 @@ exports.createCatalog = catchAsync(async (req, res, next) => {
     // get the catalog details
     const catalog = req.body;
     catalog.seller = req.user.id;
+
+    // create the catalog
     const newCatalog = await Catalog.create(catalog);
     res.status(201).json({
         status: "created",

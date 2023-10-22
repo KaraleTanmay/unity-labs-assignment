@@ -15,8 +15,13 @@ if ((process.env.ENV = "dev")) {
     app.use(morgan("dev"));
 }
 
+// middleware to access body of request
 app.use(express.json());
+
+// middlewares for required routes
 app.use("/api/auth", authRouter);
+
+// protecting buyer and seller routes so that only logged in members can access them
 app.use(
     "/api/buyer",
     authController.protected,
@@ -40,6 +45,7 @@ app.all("*", (req, res, next) => {
     );
 });
 
+// globle error controller
 app.use(errorController);
 
 module.exports = app;

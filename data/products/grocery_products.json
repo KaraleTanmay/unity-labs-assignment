@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Rice (5kg)",
+        "price": 499
+    },
+    {
+        "name": "Organic Apples (per pound)",
+        "price": 69
+    },
+    {
+        "name": "Fresh Bread",
+        "price": 49
+    },
+    {
+        "name": "Pasta (1kg)",
+        "price": 99
+    },
+    {
+        "name": "Canned Tomatoes (Set of 6)",
+        "price": 149
+    },
+    {
+        "name": "Ground Coffee (500g)",
+        "price": 249
+    },
+    {
+        "name": "Whole Milk (1 Gallon)",
+        "price": 109
+    },
+    {
+        "name": "Eggs (Dozen)",
+        "price": 59
+    },
+    {
+        "name": "Fresh Chicken Breasts (per pound)",
+        "price": 199
+    },
+    {
+        "name": "Mixed Vegetables (Frozen, 1kg)",
+        "price": 79
+    },
+    {
+        "name": "Fresh Oranges (per pound)",
+        "price": 29
+    },
+    {
+        "name": "Granola Bars (Box of 12)",
+        "price": 99
+    },
+    {
+        "name": "Potato Chips (Family Size)",
+        "price": 79
+    },
+    {
+        "name": "Canned Tuna (Set of 5)",
+        "price": 139
+    },
+    {
+        "name": "Peanut Butter (500g)",
+        "price": 89
+    },
+    {
+        "name": "Instant Noodles (Pack of 10)",
+        "price": 69
+    },
+    {
+        "name": "Applesauce (Jar)",
+        "price": 49
+    },
+    {
+        "name": "Soda (12-pack)",
+        "price": 79
+    },
+    {
+        "name": "Cereal (Family Size)",
+        "price": 99
+    },
+    {
+        "name": "Canned Soup (Set of 6)",
+        "price": 149
+    }
+]

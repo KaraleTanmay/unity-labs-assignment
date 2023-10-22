@@ -14,8 +14,8 @@ process.on("uncaughtException", (err) => {
 // please comment out the env variable and uncomment the localhost connection to test on localhost
 mongoose
     .connect(
-        process.env.MONGO_STRING
-        // || "mongodb://127.0.0.1:27017/unitylabs_tanmay"
+        process.env.MONGO_STRING || "mongodb://127.0.0.1:27017/unitylabs_tanmay"
+        // "mongodb://127.0.0.1:27017/unitylabs_tanmay"
     )
     .then(() => {
         console.log("db connected");

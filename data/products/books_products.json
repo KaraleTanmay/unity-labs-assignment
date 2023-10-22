@@ -1,0 +1,82 @@
+[
+    {
+        "name": "The Great Gatsby (Book)",
+        "price": 299
+    },
+    {
+        "name": "Harry Potter and the Philosopher's Stone (Book)",
+        "price": 399
+    },
+    {
+        "name": "To Kill a Mockingbird (Book)",
+        "price": 349
+    },
+    {
+        "name": "The Catcher in the Rye (Book)",
+        "price": 299
+    },
+    {
+        "name": "Crime and Punishment (Book)",
+        "price": 349
+    },
+    {
+        "name": "Pride and Prejudice (Book)",
+        "price": 299
+    },
+    {
+        "name": "The Lord of the Rings (Book Set)",
+        "price": 899
+    },
+    {
+        "name": "Wuthering Heights (Book)",
+        "price": 349
+    },
+    {
+        "name": "Moby-Dick (Book)",
+        "price": 399
+    },
+    {
+        "name": "War and Peace (Book)",
+        "price": 599
+    },
+    {
+        "name": "1984 (Book)",
+        "price": 249
+    },
+    {
+        "name": "The Hobbit (Book)",
+        "price": 199
+    },
+    {
+        "name": "The Alchemist (Book)",
+        "price": 199
+    },
+    {
+        "name": "Brave New World (Book)",
+        "price": 299
+    },
+    {
+        "name": "The Shining (Book)",
+        "price": 249
+    },
+    {
+        "name": "Jane Eyre (Book)",
+        "price": 299
+    },
+    {
+        "name": "The Odyssey (Book)",
+        "price": 349
+    },
+    {
+        "name": "Frankenstein (Book)",
+        "price": 249
+    },
+    {
+        "name": "The Road (Book)",
+        "price": 299
+    },
+    {
+        "name": "The Divine Comedy (Book Set)",
+        "price": 699
+    }
+]

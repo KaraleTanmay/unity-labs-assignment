@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Wooden Coffee Table",
+        "price": 7999
+    },
+    {
+        "name": "Queen-size Bed Frame",
+        "price": 12999
+    },
+    {
+        "name": "Leather Sofa",
+        "price": 26999
+    },
+    {
+        "name": "Dining Table Set",
+        "price": 14999
+    },
+    {
+        "name": "Bookshelf (4 Shelves)",
+        "price": 2999
+    },
+    {
+        "name": "Desk and Chair Set",
+        "price": 5999
+    },
+    {
+        "name": "Wardrobe Closet",
+        "price": 9999
+    },
+    {
+        "name": "TV Stand",
+        "price": 5499
+    },
+    {
+        "name": "Kitchen Table and Chairs",
+        "price": 6999
+    },
+    {
+        "name": "Nightstand with Drawer",
+        "price": 1799
+    },
+    {
+        "name": "Reclining Armchair",
+        "price": 6499
+    },
+    {
+        "name": "Bar Stools (Set of 2)",
+        "price": 1999
+    },
+    {
+        "name": "Computer Desk",
+        "price": 3799
+    },
+    {
+        "name": "Sectional Sofa",
+        "price": 31999
+    },
+    {
+        "name": "Folding Chairs (Set of 4)",
+        "price": 4999
+    },
+    {
+        "name": "Bunk Bed with Mattresses",
+        "price": 14999
+    },
+    {
+        "name": "End Tables (Set of 2)",
+        "price": 2499
+    },
+    {
+        "name": "Bar Cabinet",
+        "price": 7999
+    },
+    {
+        "name": "Chest of Drawers",
+        "price": 7499
+    },
+    {
+        "name": "Gaming Chair",
+        "price": 10499
+    }
+]

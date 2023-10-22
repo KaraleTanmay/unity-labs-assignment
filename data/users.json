@@ -1,0 +1,107 @@
+[
+    {
+        "email": "john.doe@example.com",
+        "username": "john_doe",
+        "password": "securePassword123",
+        "passwordConfirm": "securePassword123",
+        "usertype": "seller"
+    },
+    {
+        "email": "jane.smith@example.com",
+        "username": "jane_smith",
+        "password": "anotherPassword456",
+        "passwordConfirm": "anotherPassword456",
+        "usertype": "buyer"
+    },
+    {
+        "email": "sam.jones@example.com",
+        "username": "sam_jones",
+        "password": "strongPassword789",
+        "passwordConfirm": "strongPassword789",
+        "usertype": "seller"
+    },
+    {
+        "email": "emily.wilson@example.com",
+        "username": "emily_wilson",
+        "password": "mySecretPassword",
+        "passwordConfirm": "mySecretPassword",
+        "usertype": "buyer"
+    },
+    {
+        "email": "michael.brown@example.com",
+        "username": "michael_brown",
+        "password": "topSecret12345",
+        "passwordConfirm": "topSecret12345",
+        "usertype": "seller"
+    },
+    {
+        "email": "susan.davis@example.com",
+        "username": "susan_davis",
+        "password": "password123",
+        "passwordConfirm": "password123",
+        "usertype": "buyer"
+    },
+    {
+        "email": "robert.johnson@example.com",
+        "username": "robert_johnson",
+        "password": "letMeInBoo",
+        "passwordConfirm": "letMeInBoo",
+        "usertype": "seller"
+    },
+    {
+        "email": "lisa.anderson@example.com",
+        "username": "lisa_anderson",
+        "password": "secretPass5678",
+        "passwordConfirm": "secretPass5678",
+        "usertype": "buyer"
+    },
+    {
+        "email": "carol.white@example.com",
+        "username": "carol_white",
+        "password": "randomPassword123",
+        "passwordConfirm": "randomPassword123",
+        "usertype": "seller"
+    },
+    {
+        "email": "david.martin@example.com",
+        "username": "david_martin",
+        "password": "secure12345",
+        "passwordConfirm": "secure12345",
+        "usertype": "buyer"
+    },
+    {
+        "email": "laura.adams@example.com",
+        "username": "laura_adams",
+        "password": "pass123456",
+        "passwordConfirm": "pass123456",
+        "usertype": "seller"
+    },
+    {
+        "email": "peter.clark@example.com",
+        "username": "peter_clark",
+        "password": "password567",
+        "passwordConfirm": "password567",
+        "usertype": "buyer"
+    },
+    {
+        "email": "sarah.hall@example.com",
+        "username": "sarah_hall",
+        "password": "securePass789",
+        "passwordConfirm": "securePass789",
+        "usertype": "seller"
+    },
+    {
+        "email": "mark.harris@example.com",
+        "username": "mark_harris",
+        "password": "pass98765",
+        "passwordConfirm": "pass98765",
+        "usertype": "buyer"
+    },
+    {
+        "email": "linda.thompson@example.com",
+        "username": "linda_thompson",
+        "password": "secretPass321",
+        "passwordConfirm": "secretPass321",
+        "usertype": "seller"
+    }
+]

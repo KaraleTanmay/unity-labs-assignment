@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Revlon Hair Dryer",
+        "price": 699
+    },
+    {
+        "name": "L'Oréal Paris Mascara",
+        "price": 299
+    },
+    {
+        "name": "Maybelline Lipstick",
+        "price": 199
+    },
+    {
+        "name": "Nivea Face Cream",
+        "price": 349
+    },
+    {
+        "name": "Sunscreen Lotion (SPF 30)",
+        "price": 299
+    },
+    {
+        "name": "Hair Conditioner (500ml)",
+        "price": 199
+    },
+    {
+        "name": "Shampoo (400ml)",
+        "price": 129
+    },
+    {
+        "name": "Makeup Brushes Set",
+        "price": 399
+    },
+    {
+        "name": "Men's Razor Kit",
+        "price": 199
+    },
+    {
+        "name": "Perfume (50ml)",
+        "price": 699
+    },
+    {
+        "name": "Skin Cleansing Wipes (Pack of 25)",
+        "price": 119
+    },
+    {
+        "name": "Face Mask (Set of 5)",
+        "price": 199
+    },
+    {
+        "name": "Hair Straightener",
+        "price": 799
+    },
+    {
+        "name": "Body Lotion (400ml)",
+        "price": 249
+    },
+    {
+        "name": "Eyeliner Pencil",
+        "price": 149
+    },
+    {
+        "name": "Manicure Kit",
+        "price": 299
+    },
+    {
+        "name": "Lip Balm (Pack of 3)",
+        "price": 99
+    },
+    {
+        "name": "Compact Powder",
+        "price": 199
+    },
+    {
+        "name": "Nail Polish Set (Pack of 10)",
+        "price": 499
+    },
+    {
+        "name": "Cologne for Men (100ml)",
+        "price": 699
+    }
+]

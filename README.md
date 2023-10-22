@@ -9,10 +9,10 @@ To get this project up and running on your local machine, follow these steps:
 1.  Clone this repository and open it with your preferred code editor.
 2.  In the terminal, navigate to the project directory and run the following command to install the project dependencies:
 
-    ```bash
+    bashCopy code
 
     `npm install`
-    ```
+    
 
 3.  Ensure that you have MongoDB installed on your system. If not, you can download it from [MongoDB's official website](https://www.mongodb.com/try/download/community).
 4.  By default, the project is configured to connect to a MongoDB database at `mongodb://127.0.0.1:27017/unitylabs_tanmay`. You can change the database connection string by modifying the `MONGO_STRING` variable in the `configure.env` file.
